@@ -10,11 +10,12 @@ export default function App() {
   useEffect(()=>{
     console.log(event);
   },[event])
-
+  
   const [triggerEvent, setTriggerEvent] = useState(false)
 
   return (
     <div className="bg-green-100 pt-6 font-sans">
+      <div className="pa-0">Info: To view the actions, drag the components in the left section to mid section and press start</div>
       <div className="h-screen overflow-hidden flex flex-row  ">
         <div className="flex-1 h-screen overflow-hidden flex flex-row bg-white border-t border-r border-gray-200 rounded-tr-xl mr-2">
           <Sidebar triggerEvent={triggerEvent} getEvents={(event) => setEvents(event)} /> 
